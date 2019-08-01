@@ -192,7 +192,7 @@
     <div>
 
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist" id="damu-tabs">
+      <ul class="nav nav-tabs" role="tablist" id="damu-list">
         <li role="presentation" class="active"><a href="#lione" aria-controls="home" role="tab" data-toggle="tab">狮子座</a></li>
         <li role="presentation"><a href="#sheep" aria-controls="profile" role="tab" data-toggle="tab">白羊座</a></li>
         <li role="presentation"><a href="#fish" aria-controls="messages" role="tab" data-toggle="tab">双鱼座</a></li>
@@ -201,7 +201,7 @@
     
       <!-- Tab panes -->
       <div class="tab-content" id="damu-tab">
-        <div role="tabpanel" class="tab-pane active" id="#lione">
+        <div role="tabpanel" class="tab-pane active" id="lione">
                 <div class="row">
                     <div class="col-md-7"><h3>狮子座</h3><p>狮子座男爱面子、自信得简直可以说是自大，常常会很在乎别人对自己的看法，也常会因此使自己不快乐，与生俱来超级自信和坚韧不拔的品性，他们看似严谨冷漠，但</p></div>
                     <div class="col-md-5"><img src="imags/sz.png" ></div>
@@ -209,19 +209,19 @@
           
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="#sheep">
+        <div role="tabpanel" class="tab-pane" id="sheep">
             <div class="row">
               <div class="col-md-7"><h3>白羊座</h3><p>白羊座有一种让人看见就觉得开心的感觉，因为总是看起来都是那么地热情、阳光、乐观、坚强，对朋友也慷概大方，性格直来直往，就是有点小脾气。白羊男有大男人主义的性格，而白羊女就是女汉子的形象。</p></div>
               <div class="col-md-5"><img src="imags/by.png" ></div>
             </div>
         </div>
-        <div role="tabpanel" class="tab-pane" id="#fish">
+        <div role="tabpanel" class="tab-pane" id="fish">
           <div class="row">
             <div class="col-md-7"><h3>双鱼座</h3><p>双鱼座是十二宫最后一个星座，他集合了所有星座的优缺点于一身，同时受水象星座的情绪化影响，使他们原来复杂的性格又添加了更复杂的一笔。双鱼座的人最大的优点是有一颗善良的心，他们愿意帮助别人，甚</p></div>
             <div class="col-md-5"><img src="imags/sy.png" ></div>
           </div>
         </div>
-        <div role="tabpanel" class="tab-pane" id="#crow">
+        <div role="tabpanel" class="tab-pane" id="crow">
           <div class="row">
             <div class="col-md-7"><h3>金牛座</h3><p>金牛座很保守，喜欢稳定，一旦有什么变动就会觉得心里不踏实，性格也比较慢热，但你是理财高手，对于投资理财都有着独特的见解。金牛男的性格有点儿自我，而金牛女就喜欢投资自己，想要过得更好。</p></div>
             <div class="col-md-5"><img src="imags/jn.png" ></div>
@@ -261,9 +261,9 @@
      })
      
      $("#damu-nav >li>a").click(function(e){
-      e.preventDefault();
+      // e.preventDefault();
       var href = $(this).attr("href");
-      $('#damu-tabs >li > a[href="'+ href +'"]').tab("show");
+      $('#damu-list >li > a[href="'+ href +'"]').tab("show");
      })
 
       </script> 
