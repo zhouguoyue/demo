@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-      <title>浏览器博物馆</title>
+      <title>星座博物馆</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,10 +21,12 @@
 .carousel-inner>.item {
   height: 500px;
   overflow: hidden;
+  
 }
 .carousel-inner>.item img{
   width: 100%;
-  height: 100%;
+  margin-top: -100px;
+
 }
 .carousel{
   margin-top: 50px;
@@ -45,6 +47,13 @@
    display: -webkit-box;
    -webkit-line-clamp: 3;
    -webkit-box-orient: vertical;
+}
+.container>hr{
+  margin: 50px auto;
+  border: 1px solid rgb(197, 197, 197);
+}
+#damu-tab .row >div> img{
+  width: 100%;
 }
 
 </style>
@@ -74,17 +83,15 @@
                 <li><a href="#">简述</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">特点 <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">One more separated link</a></li>
+                  <ul class="dropdown-menu" id="damu-nav">
+                    <li><a href="#lione">狮子座</a></li>
+                    <li><a href="#sheep">白羊座</a></li>
+                    <li><a href="#crow"> 金牛座 </a></li>
+                    <li><a href="#fish"> 双鱼座</a></li>
+            
                   </ul>
                 </li>
-                <li><a href="#">关于</a></li>
+                <li ><a href="#" data-toggle="modal" data-target="#myModal" >关于</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -104,25 +111,25 @@
               <div class="item active">
                 <img src="imags/pic01.jpg" alt="哪吒">
                 <div class="carousel-caption">
-                  哪吒
+                 狮子座
                 </div>
               </div>
               <div class="item">
                 <img src="imags/pic02.jpg" alt="敖丙">
                 <div class="carousel-caption">
-                  敖丙
+                  双鱼座
                 </div>
               </div>
               <div class="item">
                   <img src="imags/pic03.jpg" alt="敖丙">
                   <div class="carousel-caption">
-                    敖丙
+                    金牛座
                   </div>
                 </div>
               <div class="item">
                   <img src="imags/pic04.jpg" alt="敖丙">
                   <div class="carousel-caption">
-                    哪吒
+                    白羊座
                   </div>
               </div>
             </div>
@@ -174,15 +181,91 @@
             </div>
         </div> 
   </div>
-         
+  <!-- 分隔线 -->
+  <div class="container">
+    <hr>
+  </div>
 
-      
+  <!-- 标签页 -->
+
+  <div class="container">
+    <div>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist" id="damu-tabs">
+        <li role="presentation" class="active"><a href="#lione" aria-controls="home" role="tab" data-toggle="tab">狮子座</a></li>
+        <li role="presentation"><a href="#sheep" aria-controls="profile" role="tab" data-toggle="tab">白羊座</a></li>
+        <li role="presentation"><a href="#fish" aria-controls="messages" role="tab" data-toggle="tab">双鱼座</a></li>
+        <li role="presentation"><a href="#crow" aria-controls="settings" role="tab" data-toggle="tab">金牛座</a></li>
+      </ul>
+    
+      <!-- Tab panes -->
+      <div class="tab-content" id="damu-tab">
+        <div role="tabpanel" class="tab-pane active" id="#lione">
+                <div class="row">
+                    <div class="col-md-7"><h3>狮子座</h3><p>狮子座男爱面子、自信得简直可以说是自大，常常会很在乎别人对自己的看法，也常会因此使自己不快乐，与生俱来超级自信和坚韧不拔的品性，他们看似严谨冷漠，但</p></div>
+                    <div class="col-md-5"><img src="imags/sz.png" ></div>
+                </div>
+          
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="#sheep">
+            <div class="row">
+              <div class="col-md-7"><h3>白羊座</h3><p>白羊座有一种让人看见就觉得开心的感觉，因为总是看起来都是那么地热情、阳光、乐观、坚强，对朋友也慷概大方，性格直来直往，就是有点小脾气。白羊男有大男人主义的性格，而白羊女就是女汉子的形象。</p></div>
+              <div class="col-md-5"><img src="imags/by.png" ></div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="#fish">
+          <div class="row">
+            <div class="col-md-7"><h3>双鱼座</h3><p>双鱼座是十二宫最后一个星座，他集合了所有星座的优缺点于一身，同时受水象星座的情绪化影响，使他们原来复杂的性格又添加了更复杂的一笔。双鱼座的人最大的优点是有一颗善良的心，他们愿意帮助别人，甚</p></div>
+            <div class="col-md-5"><img src="imags/sy.png" ></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="#crow">
+          <div class="row">
+            <div class="col-md-7"><h3>金牛座</h3><p>金牛座很保守，喜欢稳定，一旦有什么变动就会觉得心里不踏实，性格也比较慢热，但你是理财高手，对于投资理财都有着独特的见解。金牛男的性格有点儿自我，而金牛女就喜欢投资自己，想要过得更好。</p></div>
+            <div class="col-md-5"><img src="imags/jn.png" ></div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+</div>
+
+<!-- 模态框 -->
+  <div class="modal fade" tabindex="-1" role="dialog"  id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">十二星座有哪些？</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+        
+
+
     <script src="js/jquery.1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
         $('.carousel').carousel({
        interval: 2000
      })
+     
+     $("#damu-nav >li>a").click(function(e){
+      e.preventDefault();
+      var href = $(this).attr("href");
+      $('#damu-tabs >li > a[href="'+ href +'"]').tab("show");
+     })
+
       </script> 
   </body>
 </html>
